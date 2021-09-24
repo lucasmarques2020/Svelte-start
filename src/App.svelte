@@ -1,18 +1,23 @@
 <script>
 	let contador = 0;
-	const aumentar = ()=>{
+	const aumentar = () =>{
 		contador++;
 	}
-	const apagar = ()=>{
+	const limpar = () =>{
 		contador=0;
+	}
+	const diminuir = () =>{
+		contador--;
 	}
 </script>
 
 <main>
 	<h1>Brincando com svelte</h1>
-	<h2>Resultado contador: {contador}</h2>
+	<h2>Aumentando o número com botão</h2>
+	<h2>{contador}</h2>
 	<button on:click={aumentar}>AUMENTAR</button>
-	<button on:click={apagar}>APAGAR</button>
+	<button on:click={limpar}>LIMPAR</button>
+	<button on:click={diminuir}>DIMINUIR</button>
 </main>
 
 <style>
